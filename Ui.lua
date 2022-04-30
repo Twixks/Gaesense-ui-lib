@@ -1,7 +1,3 @@
---\\ YOU SHALL NOT SHARE THIS UI-LIB TO ANYONE REGARDING ME
---\\ YOU WILL NOT USE THIS UNLESS REQUESTED.
-
-
 -- [[ // Error Handling // ]]
 local Passed, Statement = pcall(function()
 	-- [[ // Libraries // ]]
@@ -84,7 +80,7 @@ local Passed, Statement = pcall(function()
 			Pages = {},
 			Accent = Color3.fromRGB(255, 120, 30), -- Color3.fromRGB(136, 180, 57)
 			Enabled = true,
-			Key = Enum.KeyCode.Z
+			Key = Enum.KeyCode.Insert --\\ Open/Close Ui
 		}
 		--
 		do
@@ -290,7 +286,7 @@ local Passed, Statement = pcall(function()
 						Window.Enabled = not Window.Enabled
 						--
 						Window:Fade(Window.Enabled)
-					elseif Input.KeyCode and Input.KeyCode == Enum.KeyCode.X then
+					elseif Input.KeyCode and Input.KeyCode == Enum.KeyCode.Delete then --\\ Destroy Ui
 						Window:Unload()
 					end
 				end)
